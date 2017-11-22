@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<sparql xmlns="http://www.w3.org/2005/sparql-results#">
+  <head>
+    <variable name="obj1"/>
+    <variable name="obj2"/>
+    <variable name="obj3"/>
+  </head>
+  <results>
+    <result>
+      <binding name="obj1">
+        <literal>all the student who have a projects under U.S. Tiwary</literal>
+      </binding>
+      <binding name="obj2">
+        <literal>all the student who have a projects under U.S. Tiwary.</literal>
+      </binding>
+      <binding name="obj3">
+        <literal>srikant malviya, rohit mishra, sudhakar mishra, santosh burnwal are the research scholar in the silp lab</literal>
+      </binding>
+    </result>
+  </results>
+</sparql>

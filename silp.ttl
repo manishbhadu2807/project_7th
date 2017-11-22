@@ -1,0 +1,301 @@
+@prefix : <http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19> .
+
+<http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#Incharge
+:Incharge rdf:type owl:ObjectProperty ;
+          rdfs:domain :IT_Equipments ,
+                      :IT_Labs ,
+                      :IT_Projects ;
+          rdfs:range :IT_Faculty .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#Mentoring
+:Mentoring rdf:type owl:ObjectProperty ;
+           rdfs:domain :IT_Projects ,
+                       :IT_Students ;
+           rdfs:range :IT_Faculty .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#Mentors
+:Mentors rdf:type owl:ObjectProperty ;
+         rdfs:domain :IT_Labs ,
+                     :IT_Projects ,
+                     :IT_Subjects ;
+         rdfs:range :IT_Faculty .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#Researches
+:Researches rdf:type owl:ObjectProperty ;
+            rdfs:domain :IT_Students ;
+            rdfs:range :IT_Projects .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#Teaches
+:Teaches rdf:type owl:ObjectProperty ;
+         rdfs:domain :IT_Faculty ;
+         rdfs:range :IT_Subjects .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#research_groups
+:research_groups rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#Description
+:Description rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#Location
+:Location rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#Name
+:Name rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#Projects
+:Projects rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#Research_Interest
+:Research_Interest rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#Student_btech
+:Student_btech rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#Timings
+:Timings rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#equipments
+:equipments rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#student_mtech
+:student_mtech rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#student_research_scholar
+:student_research_scholar rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#students
+:students rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#work
+:work rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#B.Tech
+:B.Tech rdf:type owl:Class ;
+        rdfs:subClassOf :IT_Students .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#Dialogue_System
+:Dialogue_System rdf:type owl:Class ;
+                 rdfs:subClassOf :IT_Projects ;
+                 rdfs:comment "this group researches about dialogues and spoken dialogue system project is under this. Srikant Malviya and Rohit mishra are working on this project."^^xsd:string ;
+                 rdfs:label "Dialogue System"^^xsd:string .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#Emotion_Research
+:Emotion_Research rdf:type owl:Class ;
+                  rdfs:subClassOf :IT_Projects ;
+                  rdfs:comment "this group researches about emotions.How eye moves is project under this topic. Santosh Burnwal is working on this."^^xsd:string ;
+                  rdfs:label "Emotion Research"^^xsd:string .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#Eye_Tracking
+:Eye_Tracking rdf:type owl:Class ;
+              rdfs:subClassOf :IT_Projects ;
+              rdfs:comment "this group researches about movement of eyes.How Eye moves is the project under this.Sudhakar Mishra is working on this."^^xsd:string ;
+              rdfs:label "Eye Tracking"^^xsd:string .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#IT_Department
+:IT_Department rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#IT_Equipments
+:IT_Equipments rdf:type owl:Class ;
+               rdfs:subClassOf :IT_Department .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#IT_Faculty
+:IT_Faculty rdf:type owl:Class ;
+            rdfs:subClassOf :IT_Department .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#IT_Labs
+:IT_Labs rdf:type owl:Class ;
+         rdfs:subClassOf :IT_Department .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#IT_Projects
+:IT_Projects rdf:type owl:Class ;
+             rdfs:subClassOf :IT_Department ;
+             rdfs:label "IT Project"^^xsd:string .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#IT_Students
+:IT_Students rdf:type owl:Class ;
+             rdfs:subClassOf :IT_Department .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#IT_Subjects
+:IT_Subjects rdf:type owl:Class ;
+             rdfs:subClassOf :IT_Department .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#M.Tech
+:M.Tech rdf:type owl:Class ;
+        rdfs:subClassOf :IT_Students .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#Research_Scholar
+:Research_Scholar rdf:type owl:Class ;
+                  rdfs:subClassOf :IT_Students .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#SILP_Lab
+:SILP_Lab rdf:type owl:Class ;
+          rdfs:subClassOf :IT_Labs .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#SILP_Lab
+<http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#SILP_Lab> rdf:type owl:NamedIndividual ;
+                                                                                  :Incharge :U.S.Tiwary ;
+                                                                                  :research_groups :How_Eye_moves ,
+                                                                                                   :Sensors_Projects ,
+                                                                                                   :Spoken_Dialogue_System ;
+                                                                                  :Description "In silp lab, students researches about spoken and eyes related projects." ;
+                                                                                  :Location "CC2"^^xsd:string ;
+                                                                                  :Name "Silp Lab"^^xsd:string ;
+                                                                                  :Projects "in silp lab, there are three projects :- spoken dialogue system(dialogue system), how eye moves(eye tracking ) and sensor projects(emotion sensors)"^^xsd:string ;
+                                                                                  :Student_btech "all the student who have a projects under U.S. Tiwary"^^xsd:string ;
+                                                                                  :Timings "24X7(ALL TIME)"^^xsd:string ;
+                                                                                  :equipments "computers,servers,microphone and other research related equipments"^^xsd:string ;
+                                                                                  :student_mtech "all the student who have a projects under U.S. Tiwary."^^xsd:string ;
+                                                                                  :student_research_scholar "srikant malviya, rohit mishra, sudhakar mishra, santosh burnwal are the research scholar in the silp lab"^^xsd:string ;
+                                                                                  :work "they work on their respective projects"^^xsd:string ;
+                                                                                  rdfs:comment "Silp lab full name is Speech and image processing lab."^^xsd:string .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#How_Eye_moves
+:How_Eye_moves rdf:type owl:NamedIndividual ,
+                        :Eye_Tracking ;
+               :Name "How Eye Moves"^^xsd:string ;
+               :Student_btech "no b.tech student is fully working on this project."^^xsd:string ;
+               :student_mtech "no m.tech student is fully working on this project"^^xsd:string ;
+               :student_research_scholar "Sudhakar Mishra"^^xsd:string ;
+               rdfs:comment "How Eye moves is the project in which we research about the movement of eyes."^^xsd:string .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#Informatin_Retrieval
+:Informatin_Retrieval rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#Punit_Singh
+:Punit_Singh rdf:type owl:NamedIndividual ,
+                      :M.Tech .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#Rohit_Mishra
+:Rohit_Mishra rdf:type owl:NamedIndividual ,
+                       :Research_Scholar ;
+              :Researches :Spoken_Dialogue_System ;
+              :Description "Rohit mishra is a research scholar under silp lab. His main research interest is in spoken language system."^^xsd:string ;
+              :Name "Rohit Mishra"^^xsd:string ;
+              :Research_Interest "In Spoken Language System" .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#Santosh_Burnwal
+:Santosh_Burnwal rdf:type owl:NamedIndividual ,
+                          :Research_Scholar ;
+                 :Researches :How_Eye_moves ;
+                 :Description "Santosh Burnwal is a research scholar under silp lab. His main interest in Sensor Projects."^^xsd:string ;
+                 :Name "Santosh Burnwal"^^xsd:string .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#Sensors_Projects
+:Sensors_Projects rdf:type owl:NamedIndividual ,
+                           :Emotion_Research ;
+                  :Description "In this project, we talked about sensors"^^xsd:string ;
+                  :Name "Sensor Projects"^^xsd:string ;
+                  :student_research_scholar "Santosh Burnwal"^^xsd:string ;
+                  rdfs:comment "This project talkes about sensing."^^xsd:string .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#Spoken_Dialogue_System
+:Spoken_Dialogue_System rdf:type owl:NamedIndividual ,
+                                 :Dialogue_System ;
+                        :Mentors :U.S.Tiwary ;
+                        :Description "In this project, we talked about spoken language system."^^xsd:string ;
+                        :Name "Spoken Language System"^^xsd:string ;
+                        :student_research_scholar "Rohit Mishra, Srikant Malviya"^^xsd:string ;
+                        rdfs:comment "This talkes about spoken dialogue system." .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#Srikant_Malviya
+:Srikant_Malviya rdf:type owl:NamedIndividual ,
+                          :Research_Scholar ;
+                 :Researches :Spoken_Dialogue_System ;
+                 :Description "Srikant Malviya is a research scholar under Silp Lab. His main interest is in Spoken Language Understanding."^^xsd:string ;
+                 :Name "Srikant Malviya"^^xsd:string .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#Sudhakar_Mishra
+:Sudhakar_Mishra rdf:type owl:NamedIndividual ,
+                          :Research_Scholar ;
+                 :Researches :Sensors_Projects ;
+                 :Description "Sudhakar Mishra is a research scholar under silp lab. His main intrest is in sensor projects."^^xsd:string ;
+                 :Name "Sudhakar Mishra"^^xsd:string .
+
+
+###  http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#U.S.Tiwary
+:U.S.Tiwary rdf:type owl:NamedIndividual ,
+                     :IT_Faculty ;
+            :Incharge <http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#SILP_Lab> ;
+            :Mentoring :How_Eye_moves ,
+                       :Sensors_Projects ,
+                       :Spoken_Dialogue_System ;
+            :Teaches :Informatin_Retrieval ;
+            :Description "U.S. Tiwary is professor of IIItA and incharge of Silp Lab and his research interest in spoken dialogues and eye movements"^^xsd:string ;
+            :Name "U.S. Tiwary"^^xsd:string ;
+            :Research_Interest "Dialogue System, Eye Tracking, Emotion Senses"^^xsd:string ;
+            rdfs:comment "he is a professor."^^xsd:string .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Academics> rdfs:comment "Department of IT is here." .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi

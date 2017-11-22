@@ -1,0 +1,339 @@
+1 3 
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX xsds: <http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#>
+SELECT ?subject ?obj ?obj1
+	WHERE { ?subject xsds:Name "Silp Lab"^^xsd:string.
+	               ?subject rdfs:comment ?obj.
+		?subject xsds:Description ?obj1.
+}
+
+4 5 
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX xsds: <http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#>
+SELECT ?person ?obj
+	
+	WHERE {    ?person xsds:Name  "Silp Lab"^^xsd:string.
+		?person rdfs:comment ?obj.
+		
+ 
+ }
+
+6 9
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX xsds: <http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#>
+SELECT ?person ?obj
+	
+	WHERE {    ?person xsds:Name  "Silp Lab"^^xsd:string.
+		?person xsds:Location ?obj.
+		
+ 
+ }
+
+10 12
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX xsds: <http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#>
+SELECT ?person  ?obj1
+	
+	WHERE {    ?person xsds:Name  "Silp Lab"^^xsd:string.
+		?person xsds:Incharge ?ob1j.
+		?obj1 xsds:Name "U.S. Tiwary"^^xsd:string.
+		
+ 
+ }
+
+13 15
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX xsds: <http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#>
+SELECT ?person  ?obj1
+	
+	WHERE {    ?person xsds:Name  "U.S. Tiwary"^^xsd:string.
+		?person xsds:Description ?obj1.
+		
+ 
+ }
+
+16 19
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX xsds: <http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#>
+SELECT ?person  ?obj1
+	
+	WHERE {    ?person xsds:Name  "Silp Lab"^^xsd:string.
+		?person xsds:equipments ?obj1.
+		
+ 
+ }
+
+20 24
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX xsds: <http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#>
+SELECT ?person  ?obj1
+	
+	WHERE {    ?person xsds:Name  "Silp Lab"^^xsd:string.
+		?person xsds:Timings ?obj1.
+		
+ 
+ }
+
+25 28
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX xsds: <http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#>
+SELECT ?subject 
+	WHERE { ?subject rdfs:subClassOf ?object .
+                   ?object rdfs:label "IT Project"^^xsd:string.
+}
+
+29 31
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX xsds: <http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#>
+SELECT  ?obj1
+	WHERE { ?subject xsds:Name "Silp Lab"^^xsd:string.
+		?subject xsds:Description ?obj1.
+}
+
+32 35
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX xsds: <http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#>
+SELECT  ?obj1
+	WHERE { ?subject xsds:Name "Silp Lab"^^xsd:string.
+		?subject xsds:student_research_scholar ?obj1.
+}
+
+36 45
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX xsds: <http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#>
+SELECT  ?obj1
+	WHERE { ?subject rdfs:label "Dialogue System"^^xsd:string.
+		?subject rdfs:comment ?obj1.
+}
+
+46 55
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX xsds: <http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#>
+SELECT  ?obj1
+	WHERE { ?subject rdfs:label "Eye Tracking"^^xsd:string.
+		?subject rdfs:comment ?obj1.
+}
+
+56 65
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX xsds: <http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#>
+SELECT  ?obj1
+	WHERE { ?subject rdfs:label "Emotion Research"^^xsd:string.
+		?subject rdfs:comment ?obj1.
+}
+
+66 70
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX xsds: <http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#>
+SELECT  ?obj1
+	WHERE { ?subject xsds:Name "Rohit Mishra"^^xsd:string.
+		?subject xsds:Description ?obj1.
+}
+
+71 73
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX xsds: <http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#>
+SELECT   ?obj1
+	WHERE {
+		?subject xsds:Name "Silp Lab"^^xsd:string.
+		?subject xsds:Projects ?obj1.
+		
+}
+
+74 78
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX xsds: <http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#>
+SELECT  ?obj1
+	WHERE { ?subject xsds:Name "Srikant Malviya"^^xsd:string.
+		?subject xsds:Description ?obj1.
+}
+
+79 83
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX xsds: <http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#>
+SELECT  ?obj1
+	WHERE { ?subject xsds:Name "Sudhakar Mishra"^^xsd:string.
+		?subject xsds:Description ?obj1.
+}
+
+84 88
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX xsds: <http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#>
+SELECT  ?obj1
+	WHERE { ?subject xsds:Name "Santosh Burnwal"^^xsd:string.
+		?subject xsds:Description ?obj1.
+}
+
+89 91
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX xsds: <http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#>
+SELECT  ?obj1
+	WHERE { ?subject xsds:Name "Spoken Language System"^^xsd:string.
+		?subject xsds:Description ?obj1.
+}
+
+92 94
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX xsds: <http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#>
+SELECT  ?obj1
+	WHERE { ?subject xsds:Name "Spoken Language System"^^xsd:string.
+		?subject xsds:student_research_scholar ?obj1.
+}
+
+95 97
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX xsds: <http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#>
+SELECT  ?obj1
+	WHERE { ?subject xsds:Name "How Eye Moves"^^xsd:string.
+		?subject xsds:student_research_scholar ?obj1.
+}
+
+98 100
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX xsds: <http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#>
+SELECT  ?obj1
+	WHERE { ?subject xsds:Name "Sensor Projects"^^xsd:string.
+		?subject xsds:student_research_scholar ?obj1.
+}
+
+101 108
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX xsds: <http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#>
+SELECT  ?obj1
+	WHERE { ?subject xsds:Name "Silp Lab"^^xsd:string.
+		?subject xsds:Student_btech ?obj1.
+}
+
+109 116
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX xsds: <http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#>
+SELECT  ?obj1
+	WHERE { ?subject xsds:Name "Silp Lab"^^xsd:string.
+		?subject xsds:student_mtech ?obj1.
+}
+
+117 120
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX xsds: <http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#>
+SELECT  ?obj1?obj2 ?obj3
+	WHERE { ?subject xsds:Name "Silp Lab"^^xsd:string.
+		
+		?subject xsds:Student_btech ?obj1.
+		?subject xsds:student_mtech ?obj2.
+		?subject xsds:student_research_scholar ?obj3.
+}
+
+121 123
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX xsds: <http://www.semanticweb.org/soulbuster/ontologies/2017/9/untitled-ontology-19#>
+SELECT  ?obj1
+	WHERE { ?subject xsds:Name "Silp Lab"^^xsd:string.
+		?subject xsds:Incharge ?obj.
+		?obj xsds:Name ?obj1.
+}
+
+

@@ -1,0 +1,91 @@
+from gensim import corpora
+import numpy as np
+import nltk
+import re
+from nltk.tokenize import sent_tokenize, word_tokenize
+from nltk.corpus import stopwords
+from nltk.stem import PorterStemmer
+from collections import defaultdict
+from pprint import pprint
+from gensim import corpora, models, similarities
+suffixes = {
+    1: ["ो", "े", "ू", "ु", "ी", "ि", "ा"],
+    2: ["कर", "ाओ", "िए", "ाई", "ाए", "ने", "नी", "ना", "ते", "ीं", "ती", "ता", "ाँ", "ां", "ों", "ें"],
+    3: ["ाकर", "ाइए", "ाईं", "ाया", "ेगी", "ेगा", "ोगी", "ोगे", "ाने", "ाना", "ाते", "ाती", "ाता", "तीं", "ाओं", "ाएं", "ुओं", "ुएं", "ुआं"],
+    4: ["ाएगी", "ाएगा", "ाओगी", "ाओगे", "एंगी", "ेंगी", "एंगे", "ेंगे", "ूंगी", "ूंगा", "ातीं", "नाओं", "नाएं", "ताओं", "ताएं", "ियाँ", "ियों", "ियां"],
+    5: ["ाएंगी", "ाएंगे", "ाऊंगी", "ाऊंगा", "ाइयाँ", "ाइयों", "ाइयां"],
+}
+
+def stem(word):
+    for L in 5, 4, 3, 2, 1:
+        if len(word) > L + 1:
+            for suf in suffixes[L]:
+                if word.endswith(suf):
+                    return word[:-L]
+    return word
+def remove_stopWords(hindi):
+	words = word_tokenize(hindi)
+	stop_words = set(stopwords.words('hindi'))
+	
+	filteredtext=[]
+	for word in words:
+		word = word.lower()
+		if '-' in word:
+			word1 = word.split('-')[0]
+			word2 = word.split('-')[1]
+			if (re.match('\d+',word1) is None and re.match('[,.;\':\\(\\)-\\[\\]]',word1) is None):
+				filteredtext.append(word1)
+			if (re.match('\d+',word2) is None and re.match('[,.;\':\\(\\)-\\[\\]]',word2) is None):
+				filteredtext.append(word2)
+		else:
+			if word.endswith('-'):
+				word = word.split('-')[0]
+			if word.startswith('-'):
+				word = word.split('-')[1]
+			if re.match('\d+',word) is None and re.match('[,.;\':\\(\\)-\\[\\]]',word) is None:
+				filteredtext.append(word)
+	filteredtext=[word for word in filteredtext if word not in stop_words]
+	return filteredtext
+if __name__== "__main__":
+	file = open("/home/manish/project/sim.txt","r")
+	input=file.read( )
+	hindi=input.split("\n")
+	texts=[]
+	for idx in range(0,len(hindi)-4):
+		hindi[idx]=remove_stopWords(hindi[idx])
+		texts.append([])
+		for word in hindi[idx]:
+			texts[idx].append(stem(word))
+	# print(texts)
+	frequency = defaultdict(int)
+	for text in texts:
+		for token in text:
+			frequency[token] += 1
+	texts = [[token for token in text if frequency[token] > 1]for text in texts]
+	# print(frequency)
+	pprint(texts)
+	dictionary = corpora.Dictionary(texts)
+	corpus = [dictionary.doc2bow(text) for text in texts]
+	for text in texts:
+		print("adcanj")
+		print(text)
+	print(corpus)
+	tfidf = models.TfidfModel(corpus)
+	print(tfidf)
+	qu="लैब में कब आ जा सकते हैं ?"
+	qu=remove_stopWords(qu)
+	print(qu)
+	query=[]
+	query.append([])
+	for word in qu:
+		query[0].append(stem(word))
+	print(query)
+	query = [[token for token in que]for que in query]
+	print(query)
+	vec=[dictionary.doc2bow(qu)for qu in query]
+	vect=vec[0]
+	print(vect)
+	index = similarities.SparseMatrixSimilarity(tfidf[corpus], num_features=32)
+	pprint(index)
+	sims = index[tfidf[vect]]
+	print(list(enumerate(sims)))

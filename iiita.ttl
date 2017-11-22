@@ -1,0 +1,1068 @@
+@prefix : <http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix untitled-ontology-3: <http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3##> .
+@base <http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3> .
+
+<http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Current_research_scholar
+:Current_research_scholar rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#LabsUsed
+:LabsUsed rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Location
+:Location rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Offers
+:Offers rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Teaches
+:Teaches rdf:type owl:ObjectProperty ;
+         rdfs:domain :Faculty_of_AS ,
+                     :Faculty_of_ECE ,
+                     :Faculty_of_IT ,
+                     :Faculty_of_MS ;
+         rdfs:range :Programmes .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#TeachesForHCI
+:TeachesForHCI rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#courses
+:courses rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#for
+:for rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#have
+:have rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#of
+:of rdf:type owl:ObjectProperty ;
+    rdfs:range :Department_of_HCI .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#provideFacilityOf
+:provideFacilityOf rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Admission_process
+:Admission_process rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Course_duration
+:Course_duration rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Email_ID
+:Email_ID rdf:type owl:DatatypeProperty ;
+          rdfs:domain :Faculty_of_AS ,
+                      :Faculty_of_ECE ,
+                      :Faculty_of_IT ,
+                      :Faculty_of_MS ;
+          rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Equipments
+:Equipments rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Evaluation_Method
+:Evaluation_Method rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Highest_Package
+:Highest_Package rdf:type owl:DatatypeProperty ;
+                 rdfs:domain :Placement ;
+                 rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Lab_associated
+:Lab_associated rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Labs ;
+                rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Lowest_Package
+:Lowest_Package rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Placement ;
+                rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Name
+:Name rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Faculty_of_AS ,
+                  :Faculty_of_ECE ,
+                  :Faculty_of_IT ,
+                  :Faculty_of_MS ;
+      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#No._of_rooms
+:No._of_rooms rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Hostels .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Placement_percentage
+:Placement_percentage rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :Placement ;
+                      rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Projects_Undergoing
+:Projects_Undergoing rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Research_Interest
+:Research_Interest rdf:type owl:DatatypeProperty ;
+                   rdfs:domain :Faculty_of_AS ,
+                               :Faculty_of_ECE ,
+                               :Faculty_of_IT ,
+                               :Faculty_of_MS ;
+                   rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Review
+:Review rdf:type owl:DatatypeProperty ;
+        rdfs:domain :Mess ;
+        rdfs:range xsd:string .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Telephone
+:Telephone rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Warden
+:Warden rdf:type owl:DatatypeProperty ;
+        rdfs:range xsd:string .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Academics
+:Academics rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#BoysHostel
+:BoysHostel rdf:type owl:Class ;
+            rdfs:subClassOf :Hostels .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Cafeteria
+:Cafeteria rdf:type owl:Class ;
+           rdfs:subClassOf :Dining .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Campus_Life
+:Campus_Life rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Canteen
+:Canteen rdf:type owl:Class ;
+         rdfs:subClassOf :Dining .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Courses
+:Courses rdf:type owl:Class ;
+         rdfs:subClassOf :Academics .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Department
+:Department rdf:type owl:Class ;
+            rdfs:subClassOf :Academics .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Department_of_Applied_Science
+:Department_of_Applied_Science rdf:type owl:Class ;
+                               rdfs:subClassOf :Department .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Department_of_Electronics_and_Communication_Engineering
+:Department_of_Electronics_and_Communication_Engineering rdf:type owl:Class ;
+                                                         rdfs:subClassOf :Department .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Department_of_HCI
+:Department_of_HCI rdf:type owl:Class ;
+                   rdfs:subClassOf :Department_of_Informartion_Technology .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Department_of_Informartion_Technology
+:Department_of_Informartion_Technology rdf:type owl:Class ;
+                                       rdfs:subClassOf :Department .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Department_of_Management_Studies
+:Department_of_Management_Studies rdf:type owl:Class ;
+                                  rdfs:subClassOf :Department .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Department_of_Robotics
+:Department_of_Robotics rdf:type owl:Class ;
+                        rdfs:subClassOf :Department_of_Informartion_Technology .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Dining
+:Dining rdf:type owl:Class ;
+        rdfs:subClassOf :Campus_Life .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#ECE_Labs
+:ECE_Labs rdf:type owl:Class ;
+          rdfs:subClassOf :Labs .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Faculty_of_AS
+:Faculty_of_AS rdf:type owl:Class ;
+               rdfs:subClassOf :Department_of_Applied_Science .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Faculty_of_ECE
+:Faculty_of_ECE rdf:type owl:Class ;
+                rdfs:subClassOf :Department_of_Electronics_and_Communication_Engineering ;
+                rdfs:comment "B.Tech,M.Tech,Integrated M.Tech" .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Faculty_of_HCI
+:Faculty_of_HCI rdf:type owl:Class ;
+                rdfs:subClassOf :Department_of_HCI .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Faculty_of_IT
+:Faculty_of_IT rdf:type owl:Class ;
+               rdfs:subClassOf :Department_of_Informartion_Technology .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Faculty_of_MS
+:Faculty_of_MS rdf:type owl:Class ;
+               rdfs:subClassOf :Department_of_Management_Studies .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Faculty_of_Robotics
+:Faculty_of_Robotics rdf:type owl:Class ;
+                     rdfs:subClassOf :Department_of_Robotics .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#GirlsHostel
+:GirlsHostel rdf:type owl:Class ;
+             rdfs:subClassOf :Hostels .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Hostels
+:Hostels rdf:type owl:Class ;
+         rdfs:subClassOf :Campus_Life .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#IT_Labs
+:IT_Labs rdf:type owl:Class ;
+         rdfs:subClassOf :Labs .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Integrated_Ph.D
+:Integrated_Ph.D rdf:type owl:Class ;
+                 rdfs:subClassOf :Programmes .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Labs
+:Labs rdf:type owl:Class ;
+      rdfs:subClassOf :Department .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#M.Tech
+:M.Tech rdf:type owl:Class ;
+        rdfs:subClassOf :Programmes .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Mess
+:Mess rdf:type owl:Class ;
+      rdfs:subClassOf :Dining .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Ph.D
+:Ph.D rdf:type owl:Class ;
+      rdfs:subClassOf :Programmes .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Placement
+:Placement rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Programmes
+:Programmes rdf:type owl:Class ;
+            rdfs:subClassOf :Academics .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Research_Scholar_Hostel
+:Research_Scholar_Hostel rdf:type owl:Class ;
+                         rdfs:subClassOf :Hostels .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Visitor_Hostel
+:Visitor_Hostel rdf:type owl:Class ;
+                rdfs:subClassOf :Hostels .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#A.S_Department
+:A.S_Department rdf:type owl:NamedIndividual ,
+                         :Department ,
+                         :Department_of_Applied_Science ;
+                :Offers :B.Tech ,
+                        :M.Tech .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#AAP
+:AAP rdf:type owl:NamedIndividual ,
+              :Courses .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#AAP_Lab
+:AAP_Lab rdf:type owl:NamedIndividual ,
+                  :IT_Labs ;
+         :for :B.Tech .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#AGA
+:AGA rdf:type owl:NamedIndividual ,
+              :Courses .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#ALS
+:ALS rdf:type owl:NamedIndividual ,
+              :Courses .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Artificial_Intelligence
+:Artificial_Intelligence rdf:type owl:NamedIndividual ,
+                                  :Courses .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#B.Tech
+:B.Tech rdf:type owl:NamedIndividual ,
+                 :Programmes ;
+        :Evaluation_Method "BTech students evaluated through a) QUIZ b) MIDSEM  c) ENDSEM d) Project Evaluation" .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#B.Tech_IT
+:B.Tech_IT rdf:type owl:NamedIndividual ,
+                    :Programmes ;
+           :LabsUsed :AAP_Lab ,
+                     :IVP_Lab ,
+                     :MHRD_Lab ,
+                     :Microprocessor_Lab ,
+                     :RO_Lab ,
+                     :SILP_Lab ;
+           :Location :CC3 ;
+           :courses :Electronic_Devices_and_Circuits ,
+                    :Introduction_to_Programming ,
+                    :Mathematics ,
+                    :Physics ;
+           :Admission_process "Qualify JEE Main with rank less than 5000" ;
+           :Course_duration "4 Years" .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#BH1
+:BH1 rdf:type owl:NamedIndividual ,
+              :BoysHostel ,
+              :Hostels ;
+     :have :Canteen_Facility ,
+           :Internet_Facility ,
+           :Mess_Facility ;
+     :No._of_rooms "Approx 400" ;
+     :Review "Good" ;
+     :Warden "Dr. K. P. Singh" .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#BH2
+:BH2 rdf:type owl:NamedIndividual ,
+              :BoysHostel ,
+              :Hostels ;
+     :have :Canteen_Facility ,
+           :Internet_Facility ,
+           :Mess_Facility ;
+     :No._of_rooms 160 ;
+     :Review "Poor" ;
+     :Warden "Dr. Akhilesh Tiwari" .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#BH3
+:BH3 rdf:type owl:NamedIndividual ,
+              :BoysHostel ,
+              :Hostels ;
+     :have :Canteen_Facility ,
+           :Internet_Facility ,
+           :Mess_Facility ;
+     :No._of_rooms 155 ;
+     :Review "Average" ;
+     :Warden "Dr. Amit Prabhakar" .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#BH4
+:BH4 rdf:type owl:NamedIndividual ,
+              :BoysHostel ,
+              :Hostels ;
+     :have :Canteen_Facility ,
+           :Internet_Facility ,
+           :Mess_Facility ;
+     :No._of_rooms 158 ;
+     :Review "Average" ;
+     :Warden "Dr. Pritish Varadwaj" .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#BH5
+:BH5 rdf:type owl:NamedIndividual ,
+              :BoysHostel ,
+              :Hostels ;
+     :have :Canteen_Facility ,
+           :Internet_Facility ,
+           :Mess_Facility ;
+     :No._of_rooms 500 ;
+     :Review "Good" ;
+     :Warden "Dr. S. Venkatesan" .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Basic_Electronic_Lab
+:Basic_Electronic_Lab rdf:type owl:NamedIndividual ,
+                               :ECE_Labs .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#BasketBall_Court
+:BasketBall_Court rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Bio-MEMS
+:Bio-MEMS rdf:type owl:NamedIndividual ,
+                   :Courses .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Bio_Electronic_Lab
+:Bio_Electronic_Lab rdf:type owl:NamedIndividual ,
+                             :ECE_Labs .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Bioelectrics_and_Biomechanics
+:Bioelectrics_and_Biomechanics rdf:type owl:NamedIndividual ,
+                                        :Courses .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#CC1
+:CC1 rdf:type owl:NamedIndividual ;
+     :Name "Computer_Center_1" .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#CC2
+:CC2 rdf:type owl:NamedIndividual ;
+     :Name "Computer_Center_2" .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#CC3
+:CC3 rdf:type owl:NamedIndividual ;
+     :Name "Computer Center 3" .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#CCPM
+:CCPM rdf:type owl:NamedIndividual ,
+               :Courses .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#COI
+:COI rdf:type owl:NamedIndividual ,
+              :Courses .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Cafeteria
+:Cafeteria rdf:type owl:NamedIndividual ,
+                    :Cafeteria .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Canteen_Facility
+:Canteen_Facility rdf:type owl:NamedIndividual ,
+                           :Canteen .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Cognitive_Science
+:Cognitive_Science rdf:type owl:NamedIndividual ,
+                            :Courses .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Computer_Vision
+:Computer_Vision rdf:type owl:NamedIndividual ,
+                          :Courses .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Comunication_System_Lab
+:Comunication_System_Lab rdf:type owl:NamedIndividual ,
+                                  :ECE_Labs .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Consumer_Behaviour
+:Consumer_Behaviour rdf:type owl:NamedIndividual ,
+                             :Courses .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Control_System_Lab
+:Control_System_Lab rdf:type owl:NamedIndividual ,
+                             :ECE_Labs .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Corporate_Finance
+:Corporate_Finance rdf:type owl:NamedIndividual ,
+                            :Courses .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#DIP
+:DIP rdf:type owl:NamedIndividual ,
+              :Courses .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#DSP
+:DSP rdf:type owl:NamedIndividual ,
+              :Courses .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Dr._Amit_Prabhakar
+:Dr._Amit_Prabhakar rdf:type owl:NamedIndividual ,
+                             :Faculty_of_AS ;
+                    :Teaches :Bio-MEMS ;
+                    :Name "Dr. Amit Prabhakar" ;
+                    :Research_Interest "Clinical diagnostics using various detection based Lab on chip and nanofabricated devices, Bio-mems, Immunoassay lab-on-a-chip devices, Real-time PCR chip based detection technology, Flow cytometer chip, Cell sorting chip, Cell electroporation, Cellular-chip for single cell analysis, On chip bacterial growth studies, Blood on chip analysis, Dielectrophoresis (DEP) chip, Electrophoresis chip, Biosensing using novel techniques (i.e. based on nanowires, quantum dots etc.) with conventional approaches and conventional techniques with novel approaches, MEMS drug delivery systems and micropumps, Clinical therapeutics using nanomaterials, Implantable biomedical devices, Nanotechnology" .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Dr._Ashutosh_Kumar_Singh
+:Dr._Ashutosh_Kumar_Singh rdf:type owl:NamedIndividual ,
+                                   :Faculty_of_ECE ;
+                          :Teaches :Electronic_Devices_and_Circuits ;
+                          :Name "Dr. Ashutosh Kumar Singh" ;
+                          :Research_Interest "Wireless Sensor Networks,Adhoc Networks, Artificial Intelligence,Fuzzy Systems,Instrumentation, Automatic Control Systems,Nonlinear Systems,Measurements,Power Electronics,Electronic Devices, Modern Industrial Drives,Electrical Machines" .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Dr._Ashutosh_Mishra
+:Dr._Ashutosh_Mishra rdf:type owl:NamedIndividual ,
+                              :Faculty_of_AS ;
+                     :Teaches :Bioelectrics_and_Biomechanics ;
+                     :Name "Dr. Ashutosh Mishra" ;
+                     :Research_Interest "Bioelectrics, Biomechanics, Learning Machines, Distributed Computation and Modeling/Simulation, Biomedical Signals & Processing" .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Dr._Madhvendra_Misra
+:Dr._Madhvendra_Misra rdf:type owl:NamedIndividual ,
+                               :Faculty_of_MS ;
+                      :Teaches :Consumer_Behaviour ;
+                      :Name "Dr. Madhvendra Misra" ;
+                      :Research_Interest "Sales promotion, Consumer Behavior, Information Strategy & IT enabled Services" .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Dr._Manish_Goswami
+:Dr._Manish_Goswami rdf:type owl:NamedIndividual ,
+                             :Faculty_of_ECE ;
+                    :Teaches :VLSI ;
+                    :Name "Dr. Manish Goswami" ;
+                    :Research_Interest "Low Power Circuit design, Analog and Mixed Signal VLSI Design, Data Converters, Memory Design." .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Dr._Neetesh_Purohit
+:Dr._Neetesh_Purohit rdf:type owl:NamedIndividual ,
+                              :Faculty_of_ECE ;
+                     :Teaches :DSP ,
+                              :Modern_Wireless_communication_technology ;
+                     :Name "Dr. Neetesh Purohit" ;
+                     :Research_Interest "Modern Wireless communication technology (CDMA, OFDMA, MIMO etc.), Digital Communication system (Wired and wireless), Development and deployment of Wireless sensor networks, Digital signal processing Techniques, Antenna engineering, Computer Networks." .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Dr._Pavan_Chakraborty
+:Dr._Pavan_Chakraborty rdf:type owl:NamedIndividual ,
+                                :Faculty_of_IT ,
+                                :Faculty_of_Robotics ;
+                       :Name "Dr. Pavan Chakraborty" ;
+                       :Research_Interest "Human Gait Analysis, Human Prosthetics, Bio-metrics, Image Processing, Graphics and Visual Computing, Graphical Projections, Robotics & Instrumentation, Real Time Simulation, High Performance Computing (HPC), Artificial Life Simulation and Intelligence, Human Computer Interaction, Astronomy and Astrophysics, Large Astronomical Data Analysis, Cometary Jets Simulation," .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Dr._Pragya_Singh
+:Dr._Pragya_Singh rdf:type owl:NamedIndividual ,
+                           :Faculty_of_MS ;
+                  :Teaches :Consumer_Behaviour ;
+                  :Name "Dr. Pragya Singh" ;
+                  :Research_Interest "Marketing, consumer behaviour, rural marketing, Advertising and brand management,Entrepreneurship development, Investment management and related areas." .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Dr._Rahul_Kala
+:Dr._Rahul_Kala rdf:type owl:NamedIndividual ,
+                         :Faculty_of_IT ,
+                         :Faculty_of_Robotics ;
+                :Name "Dr. Rahul Kala" ;
+                :Research_Interest "Robot Planning, Multi-Robot Coordination, Intelligent Vehicles, Intelligent Transportation Systems, Neural Networks, Evolutionary Algorithms, Hybrid Soft Computing, Classification, Related areas of Robotics, Soft Computing, Artificial Intelligence and Pattern Recognition" .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Dr._Sudip_Sanyal
+:Dr._Sudip_Sanyal rdf:type owl:NamedIndividual ,
+                           :Faculty_of_HCI ,
+                           :Faculty_of_IT ;
+                  :Name "Dr. Sudip Sanyal" ;
+                  :Research_Interest "Machine Learning, Pattern Recognition, Information Retrieval and Natural Language Processing." .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Dr._Sudipta_Das
+:Dr._Sudipta_Das rdf:type owl:NamedIndividual ,
+                          :Faculty_of_MS ;
+                 :Teaches :Corporate_Finance ;
+                 :Name "Dr. Sudipta Das" ;
+                 :Research_Interest "Corporate Finance, Financial Modelling, Investments, Financial Econometrics, Research Methodology," .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#E.C.E_Department
+:E.C.E_Department rdf:type owl:NamedIndividual ,
+                           :Department ,
+                           :Department_of_Electronics_and_Communication_Engineering ,
+                           :M.Tech ;
+                  :Offers :B.Tech ,
+                          :Integrated_M.Tech ,
+                          :M.Tech ;
+                  :Projects_Undergoing "a) Impurities detection in Liquids using RF sensor. b) Underwater manned Vehicle.  c) Voice Controlled TV Remote and Home Appliances" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :E.C.E_Department ;
+   owl:annotatedProperty :Offers ;
+   owl:annotatedTarget :Integrated_M.Tech ;
+   rdfs:comment "Stream:Stem Cell Engineering"
+ ] .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Electronic_Devices_and_Circuits
+:Electronic_Devices_and_Circuits rdf:type owl:NamedIndividual ,
+                                          :Courses .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Embedded_System_Lab
+:Embedded_System_Lab rdf:type owl:NamedIndividual ,
+                              :ECE_Labs .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Fiber_Optics_Research_Lab
+:Fiber_Optics_Research_Lab rdf:type owl:NamedIndividual ,
+                                    :ECE_Labs .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#FootBall_ground
+:FootBall_ground rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#GH1
+:GH1 rdf:type owl:NamedIndividual ,
+              :GirlsHostel ,
+              :Hostels ;
+     :have :Canteen_Facility ,
+           :Internet_Facility ,
+           :Mess_Facility ;
+     :No._of_rooms 162 ;
+     :Review "Average" ;
+     :Warden "Dr. Ranjana Vyas" .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#GH2
+:GH2 rdf:type owl:NamedIndividual ,
+              :GirlsHostel ,
+              :Hostels ;
+     :have :Canteen_Facility ,
+           :Internet_Facility ,
+           :Mess_Facility ;
+     :No._of_rooms 158 ;
+     :Review "Good" ;
+     :Warden "Dr. Nidhi Mishra" .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#GH3
+:GH3 rdf:type owl:NamedIndividual ,
+              :GirlsHostel ,
+              :Hostels ;
+     :have :Canteen_Facility ,
+           :Internet_Facility ,
+           :Mess_Facility ;
+     :No._of_rooms 161 ;
+     :Review "Poor" ;
+     :Warden "Dr. Sonali Agarwal" .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#HCI_Department
+:HCI_Department rdf:type owl:NamedIndividual ,
+                         :Department_of_HCI ,
+                         :Department_of_Informartion_Technology ;
+                :Offers :Integrated_M.Tech ,
+                        :Integrated_Ph.D ,
+                        :M.Tech ,
+                        :Ph.D ;
+                :courses :AAP ,
+                         :AGA ,
+                         :CCPM ,
+                         :IVP ;
+                :Lab_associated "MHRD Lab" ;
+                rdfs:comment "HCI is also sometimes referred to as Man Machine Interaction (MMI) or Computer Human Interaction (CHI). Basic goal of HCI is to improve the interactions between users and computers by making computers more usable and receptive to the users' needs. Because HCI studies a human and a machine in conjunction, it draws from supporting knowledge on both the machine and the human side." .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#I.T_Department
+:I.T_Department rdf:type owl:NamedIndividual ,
+                         :Department ,
+                         :Department_of_Informartion_Technology ;
+                :Offers :B.Tech ,
+                        :Integrated_M.Tech ,
+                        :M.Tech ,
+                        :Ph.D ;
+                rdfs:comment """The objectives of the programmes offered by the Department of Information Technology are:
+
+   a) To equip students with state of art knowledge and skill in Information Technology and to produce engineers with outstanding ability
+   b) To create future leaders of IT industry and profession
+   c) To add to the existing intellectual pool of young minds to meet the growing demands of the nation in Information Technology""" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource :I.T_Department ;
+   owl:annotatedProperty :Offers ;
+   owl:annotatedTarget :Integrated_M.Tech ;
+   rdfs:comment "Stream:Robotics"
+ ] .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#IVP
+:IVP rdf:type owl:NamedIndividual ,
+              :Courses .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#IVP_Lab
+:IVP_Lab rdf:type owl:NamedIndividual ,
+                  :IT_Labs ;
+         :for :B.Tech .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Image_Processing
+:Image_Processing rdf:type owl:NamedIndividual ,
+                           :Courses .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Integrated_M.Tech
+:Integrated_M.Tech rdf:type owl:NamedIndividual ,
+                            :Programmes .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Integrated_Ph.D
+:Integrated_Ph.D rdf:type owl:NamedIndividual ,
+                          :Programmes .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Internet_Facility
+:Internet_Facility rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Introduction_to_Programming
+:Introduction_to_Programming rdf:type owl:NamedIndividual ,
+                                      :Courses .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#M.S_Department
+:M.S_Department rdf:type owl:NamedIndividual ,
+                         :Department ,
+                         :Department_of_Management_Studies ;
+                :Offers :Ph.D .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#M.Tech
+:M.Tech rdf:type owl:NamedIndividual ,
+                 :Programmes ;
+        :of :HCI_Department .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#M.Tech_HCI
+:M.Tech_HCI rdf:type owl:NamedIndividual ,
+                     :Programmes ;
+            :Admission_process "Qualify GATE with score greater than 600." .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#M.Tech_IT
+:M.Tech_IT rdf:type owl:NamedIndividual ,
+                    :Programmes ;
+           :Admission_process "Qualify GATE with score greater than 600." .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#M.Tech_RO
+:M.Tech_RO rdf:type owl:NamedIndividual ,
+                    :Programmes ;
+           :Admission_process "Qualify GATE with score greater than 600." .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#MHRD_Lab
+:MHRD_Lab rdf:type owl:NamedIndividual ,
+                   :IT_Labs ;
+          :for :B.Tech ;
+          :of :HCI_Department .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Mathematics
+:Mathematics rdf:type owl:NamedIndividual ,
+                      :Courses .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Mess_Facility
+:Mess_Facility rdf:type owl:NamedIndividual ,
+                        :Mess .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Microelectronics
+:Microelectronics rdf:type owl:NamedIndividual ,
+                           :Courses .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Microprocessor_Lab
+:Microprocessor_Lab rdf:type owl:NamedIndividual ,
+                             :ECE_Labs ,
+                             :IT_Labs ;
+                    :for :B.Tech .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Mobile_Communication_Lab
+:Mobile_Communication_Lab rdf:type owl:NamedIndividual ,
+                                   :ECE_Labs .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Modern_Wireless_communication_technology
+:Modern_Wireless_communication_technology rdf:type owl:NamedIndividual ,
+                                                   :Courses .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#NLP
+:NLP rdf:type owl:NamedIndividual ,
+              :Courses .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Ph.D
+:Ph.D rdf:type owl:NamedIndividual ,
+               :Programmes .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Physics
+:Physics rdf:type owl:NamedIndividual ,
+                  :Courses .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Placement_of_AS
+:Placement_of_AS rdf:type owl:NamedIndividual ,
+                          :Placement ;
+                 :Highest_Package "7,00,000" ;
+                 :Lowest_Package "3,50,000" ;
+                 :Placement_percentage "68%" .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Placement_of_ECE
+:Placement_of_ECE rdf:type owl:NamedIndividual ,
+                           :Placement ;
+                  :Highest_Package "11,00,000" ;
+                  :Lowest_Package "6,00,000" ;
+                  :Placement_percentage "82%" .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Placement_of_IT
+:Placement_of_IT rdf:type owl:NamedIndividual ,
+                          :Placement ;
+                 :Highest_Package "19,00,000" ;
+                 :Lowest_Package "9,00,000" ;
+                 :Placement_percentage "95%" .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Placement_of_MS
+:Placement_of_MS rdf:type owl:NamedIndividual ,
+                          :Placement ;
+                 :Highest_Package "5,00,000" ;
+                 :Lowest_Package "3,00,000" ;
+                 :Placement_percentage "60%" .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Prof._Anupam_Agarwal
+:Prof._Anupam_Agarwal rdf:type owl:NamedIndividual ,
+                               :Faculty_of_HCI ,
+                               :Faculty_of_IT ;
+                      :Teaches :Artificial_Intelligence ,
+                               :Computer_Vision ,
+                               :Image_Processing ;
+                      :Name "Prof. Anupam Agarwal" ;
+                      :Research_Interest "Graphics and Visual Computing, Computer Vision, Pattern Recognition and Image Processing, AI, Artificial Neural Networks, Rough and Fuzzy Sets, Softcomputing, Multimedia Information Procesing, Information Retrieval, Human-Computer Interaction, Remote Sensing and GIS, Computational Geometry and Software Engineering." .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Prof._B.R._Singh
+:Prof._B.R._Singh rdf:type owl:NamedIndividual ,
+                           :Faculty_of_ECE ;
+                  :Teaches :Microelectronics ;
+                  :Name "Prof. B.R. Singh" ;
+                  :Research_Interest "Microelectronics, Optoelectronic devices & circuits." .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Prof._G.C_Nandi
+:Prof._G.C_Nandi rdf:type owl:NamedIndividual ,
+                          :Faculty_of_HCI ,
+                          :Faculty_of_IT ,
+                          :Faculty_of_Robotics ;
+                 :Teaches :Artificial_Intelligence ,
+                          :Computer_Vision ;
+                 :Email_ID "gcnandi@iiita.ac.in" ;
+                 :Name "Prof. G.C Nandi" ;
+                 :Research_Interest "Soft computing, Artificial Intelligence, Robotics and Industrial automation, Advanced Artificial Intelligence, Computer Controlled Systems, Humanoid robots , Machine vision and processing" .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Prof._T._Lahiri
+:Prof._T._Lahiri rdf:type owl:NamedIndividual ,
+                          :Faculty_of_AS ;
+                 :Teaches :DIP ,
+                          :DSP ;
+                 :Name "Prof. T. Lahiri" ;
+                 :Research_Interest "Development of algorithms on Fractal simulation model and fractal measure, digital image processing, digital signal processing, soft computing models (Artificial neural network, fuzzy logic, genetic algorithm and their combinations), pattern recognition and to use them in Biomedical, Bioinformatics and other fields." .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Prof._U.S._Tiwary
+:Prof._U.S._Tiwary rdf:type owl:NamedIndividual ,
+                            :Faculty_of_HCI ,
+                            :Faculty_of_IT ;
+                   :Teaches :Artificial_Intelligence ,
+                            :CCPM ,
+                            :Cognitive_Science ,
+                            :Computer_Vision ,
+                            :DSP ,
+                            :IVP ,
+                            :Image_Processing ,
+                            :NLP ;
+                   :TeachesForHCI :CCPM ,
+                                  :Computer_Vision ,
+                                  :IVP ;
+                   :Email_ID "ust@iiita.ac.in" ;
+                   :Lab_associated "SILP Lab" ;
+                   :Name "Prof. U.S. Tiwary" ;
+                   :Research_Interest "Image Processing, Computer Vision, Medical Image Processing, Pattern Recognition & Script Analysis, Digital Signal Processing, Speech and Language Processing, Wavelet Transform, Soft Computing & Fuzzy Logic, Neuro–computing and Soft-computers, Speech driven computers, Natural Language Processing, Brain Simulation, Cognitive Science" ;
+                   :Telephone "XXXXXXXXX" .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#RO_Department
+:RO_Department rdf:type owl:NamedIndividual ,
+                        :Department_of_Informartion_Technology ,
+                        :Department_of_Robotics ;
+               :Offers :Integrated_M.Tech ,
+                       :Integrated_Ph.D ,
+                       :M.Tech ,
+                       :Ph.D ;
+               :courses :AAP ,
+                        :ALS ,
+                        :COI ,
+                        :IVP ;
+               rdfs:comment "This branch is specifically but not restrictively working on the Robot related research and development in IIIT Allahabad." .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#RO_Lab
+:RO_Lab rdf:type owl:NamedIndividual ,
+                 :IT_Labs ;
+        :of :RO_Department ;
+        rdfs:comment "Robita Lab" .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#RSH
+:RSH rdf:type owl:NamedIndividual ,
+              :Hostels ,
+              :Research_Scholar_Hostel ;
+     :have :Canteen_Facility ,
+           :Internet_Facility ,
+           :Mess_Facility ;
+     :No._of_rooms 100 ;
+     :Review "Average" ;
+     :Warden "Dr. Sanjai Singh" .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Recreation_and_Entertainment
+:Recreation_and_Entertainment rdf:type owl:NamedIndividual ,
+                                       :Campus_Life ;
+                              :provideFacilityOf :BasketBall_Court ,
+                                                 :Cafeteria ,
+                                                 :Canteen_Facility ,
+                                                 :FootBall_ground ,
+                                                 :Student_Activity_Center ,
+                                                 :Swimming_Pool ,
+                                                 :Tennis_Court .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Rohit_Mishra
+:Rohit_Mishra rdf:type owl:NamedIndividual ;
+              :Email_ID "phc2014002@iiita.ac.in" ;
+              :Name "Rohit Mishra" ;
+              :Research_Interest "Natural Language Understanding in Conversational Dialogue System" .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#SILP_Lab
+:SILP_Lab rdf:type owl:NamedIndividual ,
+                   :IT_Labs ;
+          :Current_research_scholar :Rohit_Mishra ,
+                                    :Santosh_Barnwal ,
+                                    :Shrikant_Malviya ,
+                                    :Sudhakar_Mishra ;
+          :Location :CC2 ;
+          :Equipments "a) 7 High Computational Servers b) Eye Tracking device	c) Zoom voice recorder d) EEG gadget" ;
+          :Projects_Undergoing "a) Dialog System  b) Eye Tracking c) Emotion" .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Santosh_Barnwal
+:Santosh_Barnwal rdf:type owl:NamedIndividual ;
+                 :Name "Santosh Barnwal" .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Shrikant_Malviya
+:Shrikant_Malviya rdf:type owl:NamedIndividual ;
+                  :Email_ID "shrikant.iet6153@gmail.com" ;
+                  :Name "Shrikant Malviya" ;
+                  :Research_Interest "Data Mining, Human-computer Interaction" .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Student_Activity_Center
+:Student_Activity_Center rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Sudhakar_Mishra
+:Sudhakar_Mishra rdf:type owl:NamedIndividual ;
+                 :Name "Sudhakar Mishra" ;
+                 :Research_Interest "Affective Computing, Image Processing, Computer Vision, Machine Intellgence" .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Swimming_Pool
+:Swimming_Pool rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#Tennis_Court
+:Tennis_Court rdf:type owl:NamedIndividual .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#VLSI
+:VLSI rdf:type owl:NamedIndividual ,
+               :Courses .
+
+
+###  http://www.semanticweb.org/iiita/ontologies/2017/5/untitled-ontology-3#offers
+:offers rdf:type owl:NamedIndividual ;
+        :courses :Physics .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
