@@ -2,6 +2,7 @@ from gensim import corpora
 import numpy as np
 import nltk
 import re
+import os
 from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import PorterStemmer
@@ -188,6 +189,21 @@ def remove_stopWords(hindi):
 				filteredtext.append(word)
 	filteredtext=[word for word in filteredtext if word not in stop_words]
 	return filteredtext
+def find_synonim(query):
+	file=open("spell_error.txt","w+")
+	file.write(query)
+	file.close()
+	os.chdir("/home/manish/project/JHWNL_1_2")
+	os.system("javac -classpath JHWNL.jarjavac -classpath JHWNL.jar Examples.java")
+	os.system("java -cp JHWNL.jar:.  Examples")
+	os.chdir("/home/manish/project")
+	synonym=[]
+	with open("correctd.txt","r") as f:
+		qu=f.readlines()
+	for query in qu:
+		synonym.append(query.partition('[')[-1].rpartition(']')[0].split(", "))
+	print("\n\n",synonym,"\n\n")
+	return synonym
 if __name__== "__main__":
 	file = open("/home/manish/project/sim.txt","r")
 	input=file.read( )
@@ -224,18 +240,25 @@ if __name__== "__main__":
 	# qu="लैब में कब आ जा सकते हैं ?"
 	print("\n..............................removing stop words and applying porter stemmer from the input................................................\n")
 	qu=remove_stopWords(qu)
-	diction=PyDictionary()
+	# diction=PyDictionary()
+	print("here is query",qu,len(qu))
 
 	for i in range(0,len(qu)):
+		# print("frew",frequency[qu[i]])
 		if frequency[qu[i]] <=0:
 			x=spellcorrection(qu[i])
-			if x is not None and x is not qu[i] :
+			if x is not None and x != qu[i] :
+				# print("\n\n",qu[i])
 				qu[i]=x;
 			else :
-				for x in diction.synonym(qu[i]):
-					if x is qu[i]:
-						qu[i]=x;
-						break
+				synonym=find_synonim(qu[i])
+				for x1 in synonym:
+					for y in x1:
+						# print("hy",y,"hy")
+						if y is x:
+							
+							qu[i]=x;
+							break
 	# print(qu)
 	print(qu)
 	query=[]
